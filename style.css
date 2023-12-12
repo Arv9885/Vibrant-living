@@ -7,6 +7,7 @@
     --light-background-color:#FFD7BF;
     --dark-background-color: #FFB88F;
     --medium-background-color: #f2f2f2;
+    --color-bright-orange:#F26B25;
     --logo-background-color:
     --text-color: #362918;
 }
@@ -82,20 +83,20 @@ nav{
 }
 .header-img h1{
   
-    width: 344px;
+    max-width: 344px;
     height: 90px;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     color: #352817;
     font-size: 45px;
     text-align: center;
-    letter-spacing: 0;
+    white-space:wrap;
     line-height: 50px;  
 }
-.label {
+/* .label {
     width: 344px;
     height: 90px;
-    }
+} */
     
 
 .rating-flex{
@@ -117,7 +118,7 @@ nav{
 
     width: 85px;
     text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto Mono', monospace,"Roboto Mono-Bold", Helvetica;
     font-weight:bold;
     color: #362917;
     font-size: 13px;
@@ -170,6 +171,7 @@ nav{
 .quantity:hover{
     background-color: #352817;
     color: #fff;
+ 
     font-size: 1rem;
     padding: 10px 20px;
     border: none;
@@ -182,7 +184,7 @@ nav{
 .quantity p{
     width: 99px;
     height: 20px;
-    font-family: "Roboto Mono-Bold", Helvetica;
+    font-family:'Roboto Mono', monospace,"Roboto Mono-Bold", Helvetica;
     font-weight: 700;
     color: #352817;
     font-size: 15px;
@@ -195,7 +197,7 @@ nav{
 .quantity:hover p{
     width: 99px;
     height: 20px;
-    font-family: "Roboto Mono-Bold", Helvetica;
+    font-family:'Roboto Mono', monospace,"Roboto Mono-Bold", Helvetica;
     font-weight: 700;
     color:#fff ;
     font-size: 15px;
@@ -216,12 +218,18 @@ nav{
     padding:10px 0;
 }
 .counter-container h4{
-    color: red;
+    color:#352817;
+    background-color: #FFD7BF;
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
-    margin-right: px;
-   
+    padding-right:20px;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #352817;
+    font-size: 30px;
+    line-height: 40px;
+    border: none;
 }
 
 .button {
@@ -248,6 +256,292 @@ nav{
     font-size: 1.2rem;
     margin: 0 10px;
 }
+
+.add-to-cart-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    gap: 5px;
+    color: #f2f2f2;
+    background-color: #352817;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s;
+
+}
+.add-to-cart-btn p{
+    font-family: "Roboto Mono-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 25px;
+    white-space: nowrap;
+}
+
+/* adress */
+.location{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 10px 0;
+}
+
+.location p{
+   
+    font-family: 'Roboto Mono', monospace,Arial, Helvetica, sans-serif;
+    font-weight:bolder;
+    color: #352817;
+    font-size: 13px;
+    letter-spacing: 0.65px;
+    height: 15px;
+    line-height: 15px;
+    white-space: nowrap;
+    text-transform: uppercase;
+ }
+
+ .shopping-cart p:nth-child(7){
+    
+    text-align: center;
+    margin-top: 0;
+ }
+ hr{
+    background-color: var(--dark-background-color);
+    width: 90%;
+    margin: auto;
+    border: none;
+    height: 1.5px;
+    margin-top: 40px;
+ }
+
+ /* quote */
+.quote{
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+   
+}
+.quote h2{
+    font-family:'Roboto Mono', "Roboto-Regular", Helvetica;
+    width: 343px;
+    height: 110px;
+    font-weight: 400;
+    color: #352817;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 35px;
+    margin-top: 10px;
+    white-space: wrap;
+}
+
+/* ribbon scroller */
+
+.ribbin-scroller{
+    display: flex;
+    width: 150%;
+    align-items: center;
+    justify-content: center;
+    overflow:visible;
+    animation: scroll 15s linear infinite;
+
+}
+
+
+.ribbon-items{
+    display: flex;
+    flex:0 0 35%;
+    gap: 10px;
+    align-items: center;
+    padding: 50px 0;
+    
+}
+.ribbon-items p{
+    width: 91px;
+    height: 20px; 
+    font-family: "Roboto Condensed-Bold", Helvetica;
+    font-weight: 700;
+    color: #352817;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 20px;
+    white-space: nowrap;
+
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+    
+}
+
+/* know your food  */
+
+.know-your-food-container{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+}
+.know-your-food-img1{
+    background-image: url(images/Group\ 1015.png);
+    height: 150px;
+    width: 160px;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+
+}
+.know-your-food-img2{
+    background-image: url(images/Group\ 1005.png);
+    height: 150px;
+    width: 160px;
+    position: absolute;
+    top: 30px;
+    left: 200px;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+
+}
+.know-your-food-text{
+    background-image: url(images/Group.png);
+    height: 100px;
+    width: 345px;
+    position:relative;
+    top:100px;
+    left:18px
+    
+}
+.know-your-food-text h6{
+    position: relative;
+    top: 100px;
+    text-transform: uppercase;
+    font-family:'Roboto Mono', monospace,Arial, Helvetica, sans-serif;
+    color: #352817;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 20px;
+    white-space: nowrap; 
+}
+.know-your-food-text p{
+    position: relative;
+    top: 100px;
+    text-transform: uppercase;
+    font-family: 'Roboto Mono', monospace,Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: #352817;
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 0.65px;
+    line-height: 15px;
+    white-space: nowrap;
+}
+.food-content-facts{
+    text-align: center;
+    position: relative;
+    top: 150px;
+
+}
+.food-content-facts ul li{
+    font-family: 'Roboto Mono', monospace,Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-transform: capitalize;
+    text-align: center;
+    color: #362917;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 25px;
+    white-space: nowrap;
+}
+.food-content-facts ul li span{
+   color:var(--color-bright-orange);
+   
+}
+
+
+/* inside pack */
+
+.inside-pack{
+    text-align: center;
+    position: relative;
+    top: 200px;
+
+}
+.inside-pack h4{
+    font-family: 'Roboto Mono', monospace,Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: #362917;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 20px;
+    white-space: nowrap;
+
+}
+.inside-pack-items{
+    
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.inside-pack-items p{
+    font-family: "Roboto Mono-Regular", Helvetica;
+    font-weight: 400;
+    color: #362917;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 25px;
+    text-wrap: wrapS;
+}
+
+
+
+
+
+
+
+/* .know-your-food-text svg{
+    padding-left: 30px;
+}
+#curve{
+    fill:transparent;
+}
+
+
+.text-know-your-food{
+    font-family: "Roboto Condensed-Bold", Helvetica;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #352817;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+} */
+
+
 
 
 
