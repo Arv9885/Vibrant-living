@@ -918,6 +918,7 @@ nav{
         position: fixed;
         top: 0;
         left: 30px;
+       
        }
        .logo-wrapper-big-screen{
         display: flex;
@@ -925,6 +926,11 @@ nav{
         justify-content: space-evenly;
         margin-top: 30px;
         margin-left: 0;
+        gap: 117px;
+        max-width: 90%;
+        
+        justify-content: flex-end;
+       
         }
        .logo-wrapper-big-screen ul li{
         font-weight: 400;
@@ -1109,7 +1115,7 @@ nav{
             top: 500px;
 
         }
-    .food-content-facts ul li{
+       .food-content-facts ul li{
 
         font-size: 30px;
 
@@ -1233,7 +1239,7 @@ nav{
             align-items: center;
             justify-content: center;
             gap: 80px;
-            overflow:visible;
+            overflow:hidden 100%;
             animation: scroll 15s linear infinite;
 
         }
