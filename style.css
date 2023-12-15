@@ -677,7 +677,7 @@ nav{
             background-image: url(images/Sesame\ &\ Pumpkin\ Chikki\ 1.png);
             background-size: 320px auto;
             position: fixed;
-            top: 9%;
+            top: 29%;
             left: 50%;
             height: 400px;
             width: 400px;
@@ -692,9 +692,26 @@ nav{
 
             background-repeat: no-repeat;
             position:absolute;
-            top: 20%;
+            top: 15%;
             left: 50%;
-       }
+            animation: fallDownAndDisappear 3s ease-out 3s forwards; /* Animation delay: 2s */
+        }
+        
+        @keyframes fallDownAndDisappear {
+            from {
+                top: 25%;
+                opacity: 1;
+            }
+            to {
+                top: 80lvh;
+                opacity: 1;
+            }
+          to {
+            top:100lvh;
+            opacity:0;
+          }
+        }
+
 
        .hero-large-screen {
             max-width: 95%;
@@ -907,7 +924,7 @@ nav{
         align-items: center;
         justify-content: space-evenly;
         margin-top: 30px;
-        margin-left: ;
+        margin-left: 0;
         }
        .logo-wrapper-big-screen ul li{
         font-weight: 400;
@@ -942,9 +959,30 @@ nav{
             z-index:1;
             background-repeat: no-repeat;
             position:absolute;
-            top: 20%;
+            top: 5%;
             left: 50%;
-       }
+            animation: fallDownAndDisappear 3s ease-out 3s forwards; /* Animation delay: 2s */
+        }
+        
+        @keyframes fallDownAndDisappear {
+            from {
+                top: 5%;
+                opacity: 1;
+            }
+            to {
+                top: 80lvh;
+                opacity: 1;
+            }
+          to {
+            top:100lvh;
+            opacity:1;
+          }
+          to{
+            top: 100%;
+            opacity: 0;
+          }
+        }
+       
 
        .hero-large-screen {
             max-width: 95%;
