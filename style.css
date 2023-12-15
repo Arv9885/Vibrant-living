@@ -27,6 +27,8 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px 0 16px;
+    position: sticky;
+    top: 0;
 }
 .nav-items-wrapper{
     display: inline-flex;
@@ -93,11 +95,6 @@ nav{
     white-space:wrap;
     line-height: 50px;  
 }
-/* .label {
-    width: 344px;
-    height: 90px;
-} */
-    
 
 .rating-flex{
     margin-top: 20px;
@@ -341,7 +338,7 @@ nav{
 
 /* ribbon scroller */
 
-.ribbin-scroller{
+.ribbon-scroller{
     display: flex;
     width: 150%;
     align-items: center;
@@ -397,13 +394,16 @@ nav{
 
 .know-your-food-container{
     display: flex;
+    width: 100%;
     justify-content: space-between;
-    position: absolute;
+    flex-grow: 1;
+    position:relative;
 }
 .know-your-food-img1{
     background-image: url(images/Group\ 1015.png);
     height: 150px;
     width: 160px;
+    position:relative;
     background-repeat: no-repeat;
     background-position:center;
     background-size: contain;
@@ -413,15 +413,141 @@ nav{
     background-image: url(images/Group\ 1005.png);
     height: 150px;
     width: 160px;
-    position: absolute;
     top: 30px;
     left: 200px;
+    position:relative;
     background-repeat: no-repeat;
     background-position:center;
     background-size: contain;
 
 }
-.know-your-food-text{
+.know-your-food-img3{
+    background-image: url(images/Group\ 1015.png);
+    height: 150px;
+    width: 160px;
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: -99;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+    overflow-x: hidden;
+
+}
+/* curved text */
+.curved-text{
+    display: flex;
+    height:100%;
+    width: 100%;
+    position: relative;
+    top: -70px;
+    left: -2px;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+}
+
+
+.curved-item h6{
+    font-family: "Roboto-Black", Helvetica;
+    font-weight: 900;
+    color: #352817;
+    font-size: 35px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+.text-1{
+    transform: rotate(-40.52deg);
+    position: relative;
+    left: 32px;
+    top: 50px;
+}
+.text-2{
+    transform: rotate(-33.73deg);
+    position: relative;
+    left: 25px;
+    top: 32px;
+}
+.text-3{
+    transform: rotate(-26.77deg);
+    position: relative;
+    left: 19px;
+    top: 19px;
+}
+.text-4{
+    transform: rotate(-19.1deg);
+    position: relative;
+    left: 15px;
+    top: 8px;
+
+}
+.text-5{
+    transform: rotate(-13.35deg);
+    position: relative;
+    left: 10px;
+    top: 20px;
+}
+.text-6 {
+    transform: rotate(359deg);
+    position: relative;
+    left: 5px;
+    top: -2px;
+}
+.text-7 {
+    transform: rotate(-2deg);
+    position: relative;
+    left: 0px;
+    top: -1px;
+}
+.text-8 {
+    transform: rotate(4.8deg);
+    position: relative;
+    left: -2px;
+    top: 1px;
+}
+.text-9 {
+    transform: rotate(11.43deg);
+    position: relative;
+    left: -4px;
+    top: 5px;
+}
+.text-10{
+    transform: rotate(16.22deg);
+    position: relative;
+    left: -23px;
+    top: 2px;
+
+}
+.text-11 {
+    transform: rotate(20.62deg);
+    position: relative;
+    left: -9px;
+    top: 14px;
+}
+.text-12{
+    transform: rotate(26.93deg);
+    position: relative;
+    left: -15px;
+    top: 23px;
+
+}
+.text-13 {
+    transform: rotate(33.81deg);
+    position: relative;
+    left: -19px;
+    top: 38px;
+}
+.text-14{
+    transform: rotate(40.52deg);
+    position: relative;
+    left: -26px;
+    top: 52px;
+
+}
+/* .know-your-food-text{
     background-image: url(images/Group.png);
     height: 100px;
     width: 345px;
@@ -429,7 +555,7 @@ nav{
     top:100px;
     left:18px
     
-}
+} */
 .know-your-food-text h6{
     position: relative;
     top: 100px;
@@ -506,7 +632,7 @@ nav{
     flex-wrap: wrap;
 }
 .inside-pack-items p{
-    font-family: "Roboto Mono-Regular", Helvetica;
+    font-family: 'Roboto Mono', monospace,Arial, Helvetica, sans-serif;
     font-weight: 400;
     color: #362917;
     font-size: 15px;
@@ -517,10 +643,591 @@ nav{
 }
 
 
+/* media query */
+
+@media (max-width: 600px) {
+    /* Styles for screens with a maximum width of 600px */
+  
+    .logo-wrapper-big-screen {
+       display: none;
+    }
+    .know-your-food-img3{
+       visibility: hidden;
+    }
+    .hero-large-screen{
+        display: none;
+    }
+  }
 
 
+  @media (min-width: 601px) and (max-width: 900px) {
+    /* Styles for screens with a width between 601px and 900px */
+       .hero-small-screen{
+        display: none;
+       }
+       .logo-wrapper{
+        position: fixed;
+        top: 0;
+        left: 30px;
+       }
+       .nav-items-wrapper{
+        position: sticky;
+       }
+       .chikki-img{
+            background-image: url(images/Sesame\ &\ Pumpkin\ Chikki\ 1.png);
+            background-size: 320px auto;
+            position: fixed;
+            top: 9%;
+            left: 50%;
+            height: 400px;
+            width: 400px;
+            background-repeat: no-repeat;
+
+        }
+        .chikki-package{
+            background-image: url(images/Mask\ Group.png);
+            background-size: 320px auto;
+            height: 720px;
+            width: 400px;
+
+            background-repeat: no-repeat;
+            position:absolute;
+            top: 20%;
+            left: 50%;
+       }
+
+       .hero-large-screen {
+            max-width: 95%;
+            margin: auto;
+
+       }
+       .hero-large-screen h1{
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            width: 885px;
+            height: 375px;
+            margin-top: 50px;
+            color: #352817;
+            font-size: 85px;
+            letter-spacing: -1.25px;
+            line-height: 125px;
+       }
+       .rating-flex-large-screen{
+
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+       }
+       .rating-flex-large-screen p{
+        font-weight: 700;
+        font-family:'Roboto Mono', monospace,Arial, Helvetica, sans-serif ;
+        color: #362917;
+        font-size: 15px;
+        letter-spacing: 0;
+        line-height: 20px;
+        white-space: nowrap;
+     
+
+       }
+       .hero-large-screen p:nth-last-child(6){
+        font-family: 'Roboto Mono', monospace,Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        color: #362917;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: 30px;
+        max-width: 50%;
+        white-space: wrap;
+       
+        
+       }
+       .add-to-cart-btn-large-screen{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        color:#352817;
+        font-size: 1rem;
+        padding: 10px 20px;
+        border: 1.5px solid #352817;
+        border-radius: 50px;
+        background-color: var(--dark-background-color);
+        cursor: pointer;
+        user-select: none;
+        transition: background-color 0.3s;
+        margin: 0 5px;
+       }
+       .add-to-cart-btn-large-screen:hover{
+        color: #f2f2f2;
+        background-color: #362917;
+
+       }
+       .hero-large-screen p:nth-last-child(3){
+        font-family: 'Roboto Mono', monospace,Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        color: #362917;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: 30px;
+        max-width: 50%;
+        white-space: wrap;
+    
+
+       }
+       .hero-large-screen  p:nth-last-child(5){
+        font-family: 'Roboto Mono', monospace,Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        color: #362917;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: 30px;
+        max-width: 50%;
+        white-space: wrap;
+       
+
+       }
+      .logo-wrapper-small-screen .logo-wrapper{
+            visibility: hidden;
+            position:sticky;
+            top: 0;
+        }
+        .nav-items-wrapper{
+            visibility: visible;
+        }
+        .logo-wrapper-big-screen {
+           visibility: visible;
+           padding: 0;
+           position: absolute;
+           top:0;
+        }
+        .logo-wrapper-big-screen  ul li{
+            visibility: hidden;
+            padding: 0;
+        }
+        .logo-wrapper-big-screen .nav-items-wrapper{
+            visibility: hidden;
+        }
+        .food-content-facts ul li{
+
+            font-size: 25px;
+
+        }
+        .know-your-food-text h6{
+            font-size: 28px;
+            text-align: center;
+        }
+        .know-your-food-text p{
+            font-size: 23px;
+            top: 118px;
+        }
+        .curved-item h6{
+
+            font-size: 45px;
+
+        }
+        .quote h2{
+            width: 100%;
+        }
+        .text-1{
+            left: 40px;
+            top: 47px;
+        }
+        .text-2{
+            left: 29px;
+            top: 29px;
+        }
+        .text-3{
+            left: 18px;
+            top: 14px;
+        }
+        .text-4{
+            left: 9px;
+            top: 4px;
+        }
+        .text-6{
+            left: -1px;
+            top: -8px;
+        }
+        .text-7{
+            left: -10px;
+            top: -10px;
+        }
+        .text-8{
+            left: -16px;
+            top: -7px;
+        }
+        .text-9{
+            left: -21px;
+            top: -4px;
+        }
+        .text-11{
+            left: -33px;
+            top: 10px;
+        }
+        .text-12{
+            left: -42px;
+            top: 19px;
+        }
+        .text-13{
+            left: -49px;
+            top: 32px;
+        }
+        .text-14{
+            left: -60px;
+            top: 52px;
+        }
+        .inside-pack-items{
+            flex-wrap: wrap;
+        }
+        .pack-inside{
+            
+            flex-wrap: wrap;
+        }
+        .inside-pack-items .pack-inside img{
+            height: 150px;
+            width: 150px;
+          
+        }
+}
+
+  @media (min-width: 901px) {
+    /* Styles for screens with a minimum width of 901px */
+
+    .hero-small-screen{
+        display: none;
+       }
+       .logo-wrapper{
+        position: fixed;
+        top: 0;
+        left: 30px;
+       }
+       .logo-wrapper-big-screen{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 30px;
+        margin-left: ;
+        }
+       .logo-wrapper-big-screen ul li{
+        font-weight: 400;
+        color: #352817;
+        font-size: 20px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: 20px;
+        white-space: nowrap;
+
+       }
+       .nav-items-wrapper{
+        position: sticky;
+       }
+       .chikki-img{
+            background-image: url(images/Sesame\ &\ Pumpkin\ Chikki\ 1.png);
+            background-size: 500px auto;
+            position: fixed;
+            top: 9%;
+            left: 50%;
+            height: 450px;
+            width: 450px;
+            z-index: -1;
+            background-repeat: no-repeat;
+
+        }
+        .chikki-package{
+            background-image: url(images/Mask\ Group.png);
+            background-size: 500px auto;
+            height: 820px;
+            width: 500px;
+            z-index:1;
+            background-repeat: no-repeat;
+            position:absolute;
+            top: 20%;
+            left: 50%;
+       }
+
+       .hero-large-screen {
+            max-width: 95%;
+            margin: auto;
+            padding-bottom:500px ;
+
+       }
+       .hero-large-screen h1{
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            width: 885px;
+            height: 375px;
+            margin-top: 100px;
+            color: #352817;
+            font-size: 125px;
+            letter-spacing: -1.25px;
+            line-height: 125px;
+            padding-bottom: 20px;
+            margin-bottom: 50px;
+       }
+       .rating-flex-large-screen{
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+
+       }
+       .rating-flex-large-screen  img{
+             height: 30px;
+             width: 30px;
+       }
+       .rating-flex-large-screen p{
+            font-weight: 700;
+            font-family:'Roboto Mono', monospace,Arial, Helvetica, sans-serif ;
+            color: #362917;
+            font-size: 20px;
+            letter-spacing: 0;
+            line-height: 20px;
+            white-space: nowrap;
+            
+     
+
+       }
+       .hero-large-screen p:nth-last-child(6){
+            font-family: 'Roboto Mono', monospace,Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            color: #362917;
+            font-size: 28px;
+            letter-spacing: 0;
+            line-height: 30px;
+            max-width: 50%;
+            white-space: wrap;
+            margin-bottom: 30px;
+
+        
+        
+       }
+       .quantity{
+        width:180px ;
+        margin: 30px 0;
+       }
+
+       .quantity p{
+             font-size: 22px;
+            
+       }
+       .add-to-cart-btn-large-screen{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            color:#352817;
+            font-size: 18px;
+            padding: 15px 22px;
+            border: 1.5px solid #352817;
+            border-radius: 50px;
+            background-color: var(--dark-background-color);
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.3s;
+            margin: 0 5px;
+       }
+       .add-to-cart-btn-large-screen:hover{
+            color: #f2f2f2;
+            background-color: #362917;
+
+       }
+       .hero-large-screen p:nth-last-child(3){
+            font-family: 'Roboto Mono', monospace,Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            color: #362917;
+            font-size: 25px;
+            letter-spacing: 0;
+            line-height: 30px;
+            max-width: 50%;
+            white-space: wrap;
+            margin-bottom: 30px;
+        
+
+       }
+       .hero-large-screen  p:nth-last-child(5){
+            font-family: 'Roboto Mono', monospace,Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            color: #362917;
+            font-size: 25px;
+            letter-spacing: 0;
+            line-height: 30px;
+            max-width: 50%;
+            white-space: wrap;
+       
+
+       }
+        .logo-wrapper-small-screen {
+            display: none;
+        }
+        .logo-wrapper-big-screen {
+            padding: 0;
+        }
+        .quote h2{
+            width: 42%;
+            text-align: left;
+            position: absolute;
+            top: 500px;
+
+        }
+    .food-content-facts ul li{
+
+        font-size: 30px;
+
+        }
+        .know-your-food-text h6{
+            font-size: 32px;
+            text-align: center;
+        }
+        .know-your-food-text p{
+            font-size: 32px;
+            top: 118px;
+        }
+        .curved-item h6{
+
+            font-size: 58px;
 
 
+        }
+        .text-1 {
+            transform: rotate(-40.52deg);
+            position: relative;
+            left: 30px;
+            top: 56px;
+        }
+        .text-2 {
+            transform: rotate(-33.73deg);
+            position: relative;
+            left: 20px;
+            top: 28px;
+        }    
+        .text-3 {
+            transform: rotate(-26.77deg);
+            position: relative;
+            left: 10px;
+            top: 3px;
+        }
+        .text-4 {
+            transform: rotate(339deg);
+            position: relative;
+            left: 5px;
+            top: -15px;
+        }
+        .text-5 {
+            transform: rotate(-13.35deg);
+            position: relative;
+            left: 10px;
+            top: 20px;
+        }
+        .text-6 {
+            transform: rotate(351deg);
+            position: relative;
+            left: 1px;
+            top: -27px;
+        }
+        .text-7 {
+            transform: rotate(-2deg);
+            position: relative;
+            left: -3px;
+            top: -33px;
+        }
+
+        .text-8 {
+            transform: rotate(4.8deg);
+            position: relative;
+            left: -8px;
+            top: -30px;
+        }
+        
+        .text-9 {
+            transform: rotate(11.43deg);
+            position: relative;
+            left: -12px;
+            top: -25px;
+        }
+        .text-10 {
+            transform: rotate(16.22deg);
+            position: relative;
+            left: -23px;
+            top: 2px;
+        }
+        .text-11 {
+            transform: rotate(20.62deg);
+            position: relative;
+            left: -25px;
+            top: -6px;
+        }
+        .text-12 {
+            transform: rotate(26.93deg);
+            position: relative;
+            left: -30px;
+            top: 9px;
+        }
+        .text-13 {
+            transform: rotate(33.81deg);
+            position: relative;
+            left: -40px;
+            top: 34px;
+        }
+        .text-14 {
+            transform: rotate(40.52deg);
+            position: relative;
+            left: -50px;
+            top: 60px;
+        }
+        .inside-pack-items{
+            flex-wrap: wrap;
+        }
+        .pack-inside{
+            
+            flex-wrap: wrap;
+        }
+        .inside-pack-items .pack-inside img{
+            height: 200px;
+            width: 200px;
+        
+        }
+        
+        .ribbon-scroller{
+            display: flex;
+            width:100%;
+            align-items: center;
+            justify-content: center;
+            gap: 80px;
+            overflow:visible;
+            animation: scroll 15s linear infinite;
+
+        }
+
+
+        .ribbon-items{
+            display: flex;
+            flex:0 0 18%;
+            gap: 10px;
+            align-items: center;
+            padding: 50px 0;
+            
+        }
+        .ribbon-items p{
+            width: 300px;
+            height: 60px; 
+            font-family: "Roboto Condensed-Bold", Helvetica;
+            font-weight: 700;
+            color: #352817;
+            font-size: 50px;
+            letter-spacing: 0;
+            line-height: 20px;
+            white-space: nowrap;
+
+        }
+        .ribbon-items img{
+            width: 100px;
+            height: 100px;
+        }
+
+
+}
 
 /* .know-your-food-text svg{
     padding-left: 30px;
